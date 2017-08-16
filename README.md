@@ -12,7 +12,7 @@ docker: error while loading shared libraries: libltdl.so.7: cannot open shared o
 ## Usage
 
 ```
-docker run -it -v /var/run/docker.sock:/var/run/docker.sock $(which docker):/usr/bin/docker devsu/gcloud-sdk-docker:alpine
+docker run -it -v /var/run/docker.sock:/var/run/docker.sock -v $(which docker):/usr/bin/docker devsu/gcloud-sdk-docker:alpine
 ```
 
 Only alpine variant is available (for now).
