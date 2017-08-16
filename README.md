@@ -6,7 +6,7 @@ Image that inherits from google/cloud-sdk, and installs docker into it.
 ## Usage
 
 ```
-docker run -v /var/run/docker.sock:/var/run/docker.sock devsu/gcloud-sdk-docker
+docker run -it -v /var/run/docker.sock:/var/run/docker.sock devsu/gcloud-sdk-docker:alpine
 ```
 
 Using docker compose:
@@ -15,7 +15,7 @@ Using docker compose:
 version: '3'
 services:
     gcloud:
-        image: devsu/gcloud-sdk-docker
+        image: devsu/gcloud-sdk-docker:alpine
         volumes:
         - '/var/run/docker.sock:/var/run/docker.sock'
 ```
